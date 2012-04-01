@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ * Code for the base feature.
+ */
+
+include_once('base.features.inc');
+
+/**
+ * Implements hook_menu().
+ */
+function base_menu() {
+  $items = array();
+  return $items;
+}
+
+/**
+ * Implements hook_theme()
+ */
+function base_theme($existing, $type, $theme, $path) {
+  return array(
+  );
+}
+
+/**
+ * Implements hook_menu_block_blocks().
+ */
+function base_menu_block_blocks() {
+  // The array key is the block delta used by menu block.
+  return array(
+    'base-1' => array(
+      'menu_name'   => 'main-menu',
+      'parent_mlid' => 0,
+      'title_link'  => 0,
+      'admin_title' => 'Main Menu',
+      'level'       => 1,
+      'follow'      => 0,
+      'depth'       => 3,
+      'expanded'    => 0,
+      'sort'        => 0,
+    ),
+    'base-2' => array(
+      'menu_name'   => 'main-menu',
+      'parent_mlid' => 0,
+      'title_link'  => 0,
+      'admin_title' => 'Sidebar Block',
+      'level'       => 2,
+      'follow'      => 'active',
+      'depth'       => 0,
+      'expanded'    => 0,
+      'sort'        => 0,
+    ),
+  );
+}
