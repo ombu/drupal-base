@@ -26,29 +26,41 @@ function base_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'ombuprofile-site_logo' => array(
+          'module' => 'ombuprofile',
+          'delta' => 'site_logo',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+        'user-login' => array(
+          'module' => 'user',
+          'delta' => 'login',
+          'region' => 'header',
+          'weight' => '-9',
+        ),
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',
           'region' => 'header',
+          'weight' => '-8',
+        ),
+        'ombuprofile-breadcrumb' => array(
+          'module' => 'ombuprofile',
+          'delta' => 'breadcrumb',
+          'region' => 'content_top',
           'weight' => '-10',
         ),
         'ombuprofile-page_title' => array(
           'module' => 'ombuprofile',
           'delta' => 'page_title',
           'region' => 'content_top',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'system-main' => array(
           'module' => 'system',
           'delta' => 'main',
           'region' => 'content',
           'weight' => '0',
-        ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'footer',
-          'weight' => '-13',
         ),
         'menu-footer-menu' => array(
           'module' => 'menu',
