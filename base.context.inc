@@ -32,12 +32,6 @@ function base_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
-        'user-login' => array(
-          'module' => 'user',
-          'delta' => 'login',
-          'region' => 'header',
-          'weight' => '-9',
-        ),
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',
